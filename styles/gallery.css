@@ -121,3 +121,25 @@ section.gallery {
     transform:  translateY(100%);
   }
 }
+
+
+/* section.gallery - mobile { */
+@media (width < 80em) {
+  section.gallery {
+    & .content {
+      grid-template-areas: 
+      "A"
+      "B"
+      "C"
+      "D";
+      gap: 1.5rem; 
+
+      & figure {
+        & img {
+          width: 19.5rem;
+          height: 16rem;   
+        }
+      }
+    }
+  }
+}
