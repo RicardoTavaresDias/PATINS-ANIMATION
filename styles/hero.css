@@ -7,6 +7,11 @@ section.hero {
   padding: 2.5rem 2rem;
   margin-inline: auto;
 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+
   & h1 {
     /* border: solid pink; */
 
@@ -45,7 +50,7 @@ section.hero {
     /* border: 1px solid red; */
     display: block;
 
-    animation: slideUp 6s infinite ease;
+    animation: slideUp 5s 2s infinite ease;
   }
 
 
@@ -92,8 +97,103 @@ section.hero {
     }
 
   }
+
+  /* Patins */
+  & > div:nth-child(2) {
+    display: block;
+    width: 100%;
+    max-width: 30.5rem;
+    height: 30.5rem;
+
+    /* border: 2px solid deeppink; */
+
+    & .content {
+      /* border: 2px solid black; */
+
+      /* Aqui esta pegando toda a largura da div:nth-child(2) que foi definido que vai ser respeitado dentro dele */
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    & img {
+      position: absolute;
+      width: 100%;
+    }
+
+    /* src*="Ellipse" - vai pesquisar qualquer coisa que tenha a palavra Ellipse */
+    & img[src*="Ellipse"] {
+      /* border: solid blue; */
+
+      width: 94%;
+      top: 3%;
+      left: 3%;
+
+      /* Removendo da tela a img Ellipse e será adicionado na @keyframes slideIn */
+      transform: translateX(200%);
+      /* chama slideIn de 3s, e com atraso de 200ms, ease - mais suave e forwards - assim que realizar ficar no local, forwards segnifica tambem manter a definição da slideIn do @keyframes*/
+      animation: slideIn 3s 200ms ease forwards;
+    }
+
+    /* src*="patins" - vai pesquisar qualquer coisa que tenha a palavra patins */
+    & img[src*="patins"] {
+      /* border: solid yellow; */
+
+      z-index: 1;
+
+       /* Removendo da tela a img patins e será adicionado na @keyframes slideIn */
+       transform: translateX(200%);
+       /* chama slideIn de 3s ease - mais suave e forwards - assim que realizar ficar no local, forwards segnifica tambem manter a definição da slideIn do @keyframes*/
+       animation: slideIn 3s ease forwards;
+    }
+
+    /* src*="stars-1" - vai pesquisar qualquer coisa que tenha a palavra stars-1 */
+    & img[src*="stars-1"] {
+      /* border: solid green; */
+
+      max-width: 5.5rem;
+      top:30%;
+      z-index: 0;
+
+      opacity: 0;
+      transform: translateX(400%);
+      /* chama slideIn de 2s, e com atraso de 800ms, ease - mais suave e both - assim que realizar ficar no local, both segnifica tambem manter a definição da slideIn do @keyframes. apos virgula vai chamar appear de 100ms com atrado de 800ms e tambem both nesse efeito @keyframes*/
+      animation: slideIn 2s 800ms ease both, appear 100ms 800ms both;
+    }
+
+    /* src*="stars-2" - vai pesquisar qualquer coisa que tenha a palavra stars-2 */
+    & img[src*="stars-2"] {
+      /* border: solid chocolate; */
+
+      max-width: 2.5rem;
+      right: 0;
+      bottom: 35%;
+
+      transform: translateX(400%);
+      animation: slideIn 2.2s 800ms ease both;
+    }
+  }
 }
 
+/* Patins lado direito */
+@keyframes slideIn {
+  50% {
+    transform: translateX(-20px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes appear {
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* Texto radical, divertida e saudavel lado esquerdo */
 @keyframes slideUp {
   /* radical mudança, static */
   0%, 22% {
