@@ -33,7 +33,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-Voce pode visualizar o projeto pronto projeto através [DESSE LINK]()
+Voce pode visualizar o projeto pronto projeto através [DESSE LINK](https://ricardotavaresdias.github.io/PATINS-ANIMATION/)
 O Projeto LP de patins animada é um agregador de ensino na Rocketseat para avançar o conhecimento em HTML e CSS. Nesse modulo foi aplicado o conceito de Animação.
 
 ## 🔖 Layout
