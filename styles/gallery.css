@@ -139,6 +139,10 @@ section.gallery {
           width: 19.5rem;
           height: 16rem;   
         }
+
+        & figcaption {
+          display: none;
+        }
       }
     }
   }
