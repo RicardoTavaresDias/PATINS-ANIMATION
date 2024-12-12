@@ -1,0 +1,50 @@
+
+.banner {
+  /* border: 1px solid deeppink; */
+
+  width: 100%;
+  padding-block: 2.5rem;
+  overflow: hidden;
+
+  & .scroller {
+    /* border: solid; */
+    width: 100%;
+    overflow: hidden;
+    padding-block: 1rem;
+  }
+
+  & .rolling {
+    display: flex;
+    gap: 1.5rem;
+
+    /* Aqui a nimação vai pegar @keyframes rolling com 2s sem parar que é linear para não da pulos e infinite sem parar */
+    animation: rolling 2s linear infinite;
+  }
+
+  & .bg-gradient-animate {
+    background: linear-gradient(45deg, var(--snitap-sky-light), var(--snitap-joy-light));
+
+    /* Aqui vai realizar movimentação das cores entre roxo e azul na animação pois nã foi definido no backgroud porcentagem nas cores*/
+    background-size: 400%;
+    background-position: 0 50%;
+
+    animation: bg-gradient 20s ease infinite;
+  }
+}
+
+
+/* animação para passagem de cores do azul para roxo e roxo para azul */
+@keyframes bg-gradient {
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+
+
+@keyframes rolling {
+  to {
+    /* a imagem tem 109px mais espaçamento de 24px que total é 133px e com 132px fica ideal sem pulos*/
+    transform: translateX(-132px);
+  }
+}
