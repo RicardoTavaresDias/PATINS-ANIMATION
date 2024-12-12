@@ -42,3 +42,9 @@ h2 {
   font-size: var(--text-lg);
   line-height: 1.2;
 }
+
+a {
+  /* inherit segnifica cor herdado pelo body */
+  color: inherit;
+  text-decoration: none;
+}
