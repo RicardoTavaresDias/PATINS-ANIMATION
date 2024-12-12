@@ -267,3 +267,20 @@ section.hero {
     transform: translateY(-15rem);
   }
 }
+
+
+/* section.hero - mobile { */
+@media (width < 80em) {
+  section.hero {
+    flex-direction: column-reverse;
+    padding-top: 0.5rem;
+    
+    & .buttons {
+      flex-direction: column-reverse;
+    }   
+    
+    & > div:nth-child(2) {
+      height: 22.5rem;
+   }
+  }
+}
